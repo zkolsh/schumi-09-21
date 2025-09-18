@@ -8,14 +8,62 @@
 	</head>
 	<body>
 		<header>
-			<div class="flex items-center flex-row justify-between
-			width=100% min-height=5% px-5 py-3 m-10 rounded-2xl bg-pink-800
-			text-white font-black text-2xl">
+			<div class="flex items-center flex-row justify-between px-5 py-3
+			m-10 rounded-2xl bg-pink-800 text-white font-black text-2xl">
 				<p>Menú</p>
 				<p>Tortres</p>
 				<p>Redes</p>
 			</div>
 		</header>
 		<p>hola</p>
+
+		<h1>Formulario de contacto</h1>
+		<p>¿Querés contactarnos?  Completá los siguientes datos para enviarnos un mensaje:</p>
+
+		<form id="form" class="grid grid-cols-1 m-10 p-5 max-w-xl mx-auto shadow-md gap-8">
+			<div class="flex flex-col">
+				<label for="name" class="block m-2 text-sm font-medium text-gray-800">Nombre</label>
+				<input name="name" type="text" class="p-2 border rounded-xl">
+			</div>
+
+			<div class="flex flex-col">
+				<label for="surname" class="block m-2 text-sm font-medium text-gray-800">Apellido</label>
+				<input name="surname" type="text" class="p-2 border rounded-xl">
+			</div>
+
+			<div class="flex flex-col">
+				<label for="email" class="block m-2 text-sm font-medium text-gray-800">E-Mail</label>
+				<input name="email" type="email" class="p-2 border rounded-xl">
+			</div>
+
+			<div class="flex flex-col">
+				<label for="phone" class="block m-2 text-sm font-medium text-gray-800">Número de teléfono</label>
+				<input name="phone" type="tel" class="p-2 border rounded-xl">
+			</div>
+
+			<div class="flex flex-col">
+				<label for="birthDate" class="block m-2 text-sm font-medium text-gray-800">Fecha de nacimiento</label>
+				<input name="birthDate" type="date" class="p-2 border rounded-xl">
+			</div>
+
+			<div class="flex flex-col">
+				<label for="gender" class="block m-2 text-sm font-medium text-gray-800">Género</label>
+				<input name="gender" type="text" class="p-2 border rounded-xl">
+			</div>
+
+			<div class="flex flex-col md:col-span-2">
+				<label for="payload" class="block m-2 text-sm font-medium text-gray-800">Comentarios</label>
+				<textarea name="payload" class="p-2 w-full border rounded-xl" rows="8"></textarea>
+			</div>
+
+			<div class="flex flex-col md:col-span-2 justify-self-center">
+				<label for="cv" class="block m-2 text-sm font-medium text-gray-800">CV</label>
+				<input name="cv" type="file" accept="application/pdf" class="p-2 border rounded-xl">
+			</div>
+
+			<button type="submit" class="rounded-2xl shadow bg-pink-900 text-white font-bold
+			w-25 max-w-md p-5 mx-auto md:col-span-2">Enviar</button>
+		</form>
+		<script src="js/form.js"></script>
 	</body>
 </html>
