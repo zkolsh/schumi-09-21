@@ -54,7 +54,7 @@ const contenedor = document.getElementById("lista-productos");
 listaDeTortas.forEach(torta => {
   const tarjeta = document.createElement("div");
   tarjeta.className = `
-    bg-white rounded-lg shadow-md overflow-hidden
+    bg-pink-100 rounded-lg shadow-md overflow-hidden
     hover:shadow-xl hover:-translate-y-1
     transition-transform transition-shadow duration-300
     flex flex-col w-full max-w-xs
@@ -77,6 +77,7 @@ listaDeTortas.forEach(torta => {
 
   contenedor.appendChild(tarjeta);
 });
+
 
 
 
