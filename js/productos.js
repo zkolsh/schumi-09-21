@@ -66,7 +66,7 @@ listaDeTortas.forEach(torta => {
       <h3 class="text-lg font-semibold mb-2">${torta.nombre}</h3>
       <p class="text-gray-600 text-sm mb-4 flex-grow">${torta.descripcion}</p>
       <p class="text-lg font-bold text-gray-800 mb-4">${torta.precio}</p>
-      <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition-colors">Comprar</button>
+      <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors">Comprar</button>
     </div>
   `;
 
@@ -77,6 +77,7 @@ listaDeTortas.forEach(torta => {
 
   contenedor.appendChild(tarjeta);
 });
+
 
 
 
