@@ -7,7 +7,7 @@ const listaDeTortas = [
   },
   {
     nombre: "Chocotorta",
-    descripcion: "Chocotorta cubierta con delicioso chocolate en rama",
+    descripcion: "La clasica Chocotorta, cubierta con delicioso chocolate en rama",
     precio: "$20000",
     imagen: "img/chocotorta.jpg"
   },
@@ -19,7 +19,7 @@ const listaDeTortas = [
   },
   {
     nombre: "Torta Argentina",
-    descripcion: "Mirá el partido de Argentina con esta hermosa torta de bizcochuelo blanco y negro relleno con el mejor Dulce de Leche y decorada como nuestra enseña patria",
+    descripcion: "Mirá el partido de Argentina con esta hermosa torta rellena con el mejor Dulce de Leche y decorada como nuestra enseña patria",
     precio: "$10000",
     imagen: "img/tortaargentina.jpg"
   },
@@ -80,6 +80,7 @@ tarjeta.innerHTML = `
 
   contenedor.appendChild(tarjeta);
 });
+
 
 
 
