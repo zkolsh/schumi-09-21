@@ -1,7 +1,7 @@
 const listaDeTortas = [
   {
     nombre: "Torta Toffe",
-    descripcion: "Exquisita Torta Toffe cubierta con chocolate tortres hecho con el cacacao más suave.",
+    descripcion: "Exquisita Torta Toffe cubierta con chocolate tortres hecho con el cacao más suave.",
     precio: "$15000",
     imagen: "torta-toffee.jpg"
   },
@@ -13,13 +13,13 @@ const listaDeTortas = [
   },
   {
     nombre: "LemonPie",
-    descripcion: "LemonPie hecho con los mejores limones de Santa Fe y con una dulce crema Chantilly",
+    descripcion: "LemonPie hecho con los mejores limones de Santa Fe y con una dulce crema Chantilly.",
     precio: "$15000",
     imagen: "lemon-pie.jpg"
   },
   {
     nombre: "Torta Argentina",
-    descripcion: "Mira el partido de argentina con esta hermosa torta de bizcochuelo blanco y negro relleno con el mejor Dulce de Leche y decorada como nuestra enseña patria",
+    descripcion: "Mirá el partido de Argentina con esta hermosa torta de bizcochuelo blanco y negro relleno con el mejor Dulce de Leche y decorada como nuestra enseña patria.",
     precio: "$10000",
     imagen: "tortaargentina.jpg"
   }
@@ -29,17 +29,23 @@ const contenedor = document.getElementById("lista-productos");
 
 listaDeTortas.forEach(torta => {
   const tarjeta = document.createElement("div");
-  tarjeta.className = "tarjeta";
-
-  tarjeta.innerHTML = `
-    <img src="${torta.imagen}" alt="${torta.nombre}">
-    <h3>${torta.nombre}</h3>
-    <p>${torta.descripcion}</p>
-    <h5><strong>${torta.precio}</strong></h5>
-    <button>Comprar</button>
+  tarjeta.className = `
+    bg-white rounded-lg shadow-md overflow-hidden
+    hover:shadow-xl hover:-translate-y-1
+    transition-transform transition-shadow duration-300
+    flex flex-col w-full max-w-xs
   `;
 
-  // Seleccionamos el botón recién creado y le agregamos un evento
+  tarjeta.innerHTML = `
+    <img src="${torta.imagen}" alt="${torta.nombre}" class="w-full h-48 object-cover">
+    <div class="p-4 flex flex-col flex-grow">
+      <h3 class="text-lg font-semibold mb-2">${torta.nombre}</h3>
+      <p class="text-gray-600 text-sm mb-4 flex-grow">${torta.descripcion}</p>
+      <p class="text-lg font-bold text-gray-800 mb-4">${torta.precio}</p>
+      <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition-colors">Comprar</button>
+    </div>
+  `;
+
   const boton = tarjeta.querySelector("button");
   boton.addEventListener("click", () => {
     alert(`¡Compraste la ${torta.nombre}!`);
