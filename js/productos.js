@@ -78,10 +78,3 @@ listaDeTortas.forEach(torta => {
 
   contenedor.appendChild(tarjeta);
 });
-
-
-
-
-
-
-

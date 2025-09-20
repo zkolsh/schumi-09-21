@@ -5,189 +5,162 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/style.css" rel="stylesheet">
 		<title>Tortres</title>
-		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-		 <style>
-        .mobile-menu {
-            transition: max-height 0.3s ease-out;
-            overflow: hidden;
-        }
-    	</style>
+		<style>
+			.mobile-menu {
+				transition: max-height 0.3s ease-out;
+				overflow: hidden;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
 			<nav class="bg-pink-800 text-white shadow-lg">
-			<div class="flex items-center flex-row justify-between px-5 py-3
-			m-10 rounded-2xl bg-pink-800 text-white font-black text-2xl">
-				<p>Tortres</p>
-                <div class="hidden md:flex items-center space-x-4">
-					<a href="#inicio" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Inicio</a>
-                    <a href="#quienes-somos" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Quiénes Somos</a>
-                    <a href="#productos" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Productos</a>
-                    <a href="#contacto" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Contacto</a>
+				<div class="flex items-center flex-row justify-between px-5 py-3
+					m-10 rounded-2xl bg-pink-800 text-white font-black text-2xl">
+					<p>Tortres</p>
+					<div class="hidden md:flex items-center space-x-4">
+						<a href="#inicio"
+							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Inicio</a>
+						<a href="#quienes-somos"
+							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Quiénes Somos</a>
+						<a href="#productos"
+							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Productos</a>
+						<a href="#contacto"
+							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Contacto</a>
+						<div class="flex items-center gap-2 ml-4">
+							<a href="https://instagram.com" target="_blank" class="social-logo">
+								<img src="img/instagram-logo.jpg" alt="Instagram"
+									class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
+							</a>
+							<a href="https://youtube.com" target="_blank" class="social-logo">
+								<img src="img/youtube-logo.png" alt="YouTube"
+									class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
+							</a>
+							<a href="https://x.com" target="_blank" class="social-logo">
+								<img src="img/x-logo.png" alt="X (Twitter)"
+									class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
+							</a>
+						</div>
+					</div>
 
-					<div class="flex items-center gap-2 ml-4">
+					<div class="md:hidden flex items-center">
+						<button type="button" id="menu-button" class="text-white focus:outline-none">
+							<i id="menu-icon" class="fas fa-bars text-xl">Menú</i>
+						</button>
+					</div>
+				</div>
+
+				<div id="mobile-menu" class="mobile-menu md:hidden max-h-0 bg-pink-800">
+					<div class="px-2 pt-2 pb-3 space-y-1">
+						<a href="#inicio"
+							class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Inicio</a>
+						<a href="#quienes-somos"
+							class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Quiénes
+							Somos</a>
+						<a href="#productos"
+							class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Productos</a>
+						<a href="#contacto"
+							class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Contacto</a>
+					</div>
+					<div class="px-3 py-2 flex gap-4 justify-center border-t border-pink-700">
 						<a href="https://instagram.com" target="_blank" class="social-logo">
-							<img src="img/instagram-logo.jpg" alt="Instagram"
-							class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain"">
+							<img src="img/instagram-logo.jpg" alt="Instagram" class="w-6 h-6 object-contain">
 						</a>
 						<a href="https://youtube.com" target="_blank" class="social-logo">
-							<img src="img/youtube-logo.png" alt="YouTube"
-							class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain"">
+							<img src="img/youtube-logo.png" alt="YouTube" class="w-6 h-6 object-contain">
 						</a>
 						<a href="https://x.com" target="_blank" class="social-logo">
-							<img src="img/x-logo.png" alt="X (Twitter)"
-							class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain"">
+							<img src="img/x-logo.png" alt="X (Twitter)" class="w-6 h-6 object-contain">
 						</a>
-        			</div>
-    			</div>
-
-				    <div class="md:hidden flex items-center">
-                        <button id="menu-button" class="text-white focus:outline-none">
-                            <i id="menu-icon" class="fas fa-bars text-xl"></i>
-                        </button>
-                    </div>
-			</div>	
-        
-
-		<div id="mobile-menu" class="mobile-menu md:hidden max-h-0 bg-pink-800">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Inicio</a>
-                    <a href="#quienes-somos" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Quiénes Somos</a>
-                    <a href="#productos" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Productos</a>
-                    <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Contacto</a>
-                </div>
-		    <div class="px-3 py-2 flex gap-4 justify-center border-t border-pink-700">
-						<a href="https://instagram.com" target="_blank" class="social-logo">
-							<img src="img/instagram-logo.jpg" alt="Instagram"
-							class="w-6 h-6 object-contain">
-						</a>
-						<a href="https://youtube.com" target="_blank" class="social-logo">
-							<img src="img/youtube-logo.png" alt="YouTube"
-							class="w-6 h-6 object-contain">
-						</a>
-						<a href="https://x.com" target="_blank" class="social-logo">
-							<img src="img/x-logo.png" alt="X (Twitter)"
-							class="w-6 h-6 object-contain">
-						</a>
-        		</div>
-        	</div>
-		</nav>
+					</div>
+				</div>
+			</nav>
+			<script type="module" src="js/navmenu.js"></script>
 		</header>
 
-		<section id="inicio>
-			<p>hola</p>
-		</section>
-			
-        <section id="contacto">
-		<h1>Formulario de contacto</h1>
-		<p>¿Querés contactarnos?  Completá los siguientes datos para enviarnos un mensaje:</p>
+		<section id="inicio">
 
-		<form id="form" class="grid grid-cols-1 m-10 p-5 max-w-xl mx-auto shadow-md gap-8">
-			<div class="flex flex-col">
-				<label for="name" class="block m-2 text-sm font-medium text-gray-800">Nombre</label>
-				<input name="name" type="text" class="p-2 border rounded-xl">
-			</div>
-
-			<div class="flex flex-col">
-				<label for="surname" class="block m-2 text-sm font-medium text-gray-800">Apellido</label>
-				<input name="surname" type="text" class="p-2 border rounded-xl">
-			</div>
-
-			<div class="flex flex-col">
-				<label for="email" class="block m-2 text-sm font-medium text-gray-800">E-Mail</label>
-				<input name="email" type="email" class="p-2 border rounded-xl">
-			</div>
-
-			<div class="flex flex-col">
-				<label for="phone" class="block m-2 text-sm font-medium text-gray-800">Número de teléfono</label>
-				<input name="phone" type="tel" class="p-2 border rounded-xl">
-			</div>
-
-			<div class="flex flex-col">
-				<label for="birthDate" class="block m-2 text-sm font-medium text-gray-800">Fecha de nacimiento</label>
-				<input name="birthDate" type="date" class="p-2 border rounded-xl">
-			</div>
-
-			<div class="flex flex-col">
-				<label for="gender" class="block m-2 text-sm font-medium text-gray-800">Género</label>
-				<input name="gender" type="text" class="p-2 border rounded-xl">
-			</div>
-
-			<div class="flex flex-col md:col-span-2">
-				<label for="payload" class="block m-2 text-sm font-medium text-gray-800">Comentarios</label>
-				<textarea name="payload" class="p-2 w-full border rounded-xl" rows="8"></textarea>
-			</div>
-
-			<div class="flex flex-col md:col-span-2 justify-self-center">
-				<label for="cv" class="block m-2 text-sm font-medium text-gray-800">CV</label>
-				<input name="cv" type="file" accept="application/pdf" class="p-2 border rounded-xl">
-			</div>
-
-			<button type="submit" class="rounded-2xl shadow bg-pink-900 text-white font-bold
-			w-25 max-w-md p-5 mx-auto md:col-span-2">Enviar</button>
-		</form>
-		
-		    <div class="w-24 h-px bg-pink-400 mx-auto mb-6"></div>
 		</section>
 
+		<script type="module" src="js/productos.js"></script>
 		<section id="productos">
 			<h1 class="text-center text-4xl font-bold mb-8">Catálogo de Tortas</h1>
 
- 			<div id="lista-productos" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+			<div id="lista-productos" class="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
 		</section>
-		
+
+		<section id="contacto">
+			<h1 class="text-center text-4xl font-bold mb-8">Formulario de contacto</h1>
+			<p class="text-center text-xl font-italic mb-4">
+				¿Querés contactarnos? Completá los siguientes datos para enviarnos un mensaje:
+			</p>
+
+			<form id="form" class="grid grid-cols-1 m-10 p-5 max-w-xl mx-auto shadow-md gap-8">
+				<div class="flex flex-col">
+					<label for="name" class="block m-2 text-sm font-medium text-gray-800">Nombre</label>
+					<input name="name" type="text" class="p-2 border rounded-xl">
+				</div>
+
+				<div class="flex flex-col">
+					<label for="surname" class="block m-2 text-sm font-medium text-gray-800">Apellido</label>
+					<input name="surname" type="text" class="p-2 border rounded-xl">
+				</div>
+
+				<div class="flex flex-col">
+					<label for="email" class="block m-2 text-sm font-medium text-gray-800">E-Mail</label>
+					<input name="email" type="email" class="p-2 border rounded-xl">
+				</div>
+
+				<div class="flex flex-col">
+					<label for="phone" class="block m-2 text-sm font-medium text-gray-800">Número de teléfono</label>
+					<input name="phone" type="tel" class="p-2 border rounded-xl">
+				</div>
+
+				<div class="flex flex-col">
+					<label for="birthDate" class="block m-2 text-sm font-medium text-gray-800">Fecha de nacimiento</label>
+					<input name="birthDate" type="date" class="p-2 border rounded-xl">
+				</div>
+
+				<div class="flex flex-col">
+					<label for="gender" class="block m-2 text-sm font-medium text-gray-800">Género</label>
+					<input name="gender" type="text" class="p-2 border rounded-xl">
+				</div>
+
+				<div class="flex flex-col md:col-span-2">
+					<label for="payload" class="block m-2 text-sm font-medium text-gray-800">Comentarios</label>
+					<textarea name="payload" class="p-2 w-full border rounded-xl" rows="8"></textarea>
+				</div>
+
+				<div class="flex flex-col md:col-span-2 justify-self-center">
+					<label for="cv" class="block m-2 text-sm font-medium text-gray-800">CV</label>
+					<input name="cv" type="file" accept="application/pdf" class="p-2 border rounded-xl">
+				</div>
+
+				<button type="submit" class="rounded-2xl shadow bg-pink-900 text-white font-bold
+					w-25 max-w-md p-5 mx-auto md:col-span-2">Enviar</button>
+				<script type="module" src="js/form.js"></script>
+			</form>
+		</section>
+
+		<div class="w-24 h-px bg-pink-400 mx-auto mb-6"></div>
+
 		<section id="quienes-somos">
-		 <footer class="bg-pink-800 text-white py-8 mt-auto">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <p class="text-base md:text-lg leading-relaxed text-pink-100 mb-6">
-                <span class="font-bold text-white text-lg md:text-xl">Quiénes somos:</span>
-                Somos un grupo de seis estudiantes apasionados por el diseño y desarrollo web. 
-                Trabajamos en equipo para crear sitios modernos, funcionales y atractivos, 
-                combinando creatividad y aprendizaje constante. Este proyecto forma parte de nuestros 
-                trabajos prácticos, que presentamos cada domingo al profesor 
-                <span class="font-semibold text-yellow-300">Schujman</span>, quien nos guía en este 
-                camino de crecimiento académico y profesional. Nuestro objetivo es seguir 
-                perfeccionando nuestras habilidades en programación, diseño y experiencia de usuario, 
-                aportando ideas innovadoras en cada entrega.
-            </p>
-			</section>
+			<div class="max-w-4xl mx-auto px-4 text-center">
+				<p class="text-base md:text-lg leading-relaxed text-pink-100 mb-6">
+					<span class="font-bold text-white text-lg md:text-xl">Quiénes somos:</span>
+					Somos un grupo de seis estudiantes apasionados por el diseño y desarrollo web.
+					Trabajamos en equipo para crear sitios modernos, funcionales y atractivos,
+					combinando creatividad y aprendizaje constante. Este proyecto forma parte de nuestros
+					trabajos prácticos, que presentamos cada domingo al profesor
+					<span class="font-semibold text-yellow-300">Schujman</span>, quien nos guía en este
+					camino de crecimiento académico y profesional. Nuestro objetivo es seguir
+					perfeccionando nuestras habilidades en programación, diseño y experiencia de usuario,
+					aportando ideas innovadoras en cada entrega.
+				</p>
+			</div>
+		</section>
 
-		<script type="module" src="js/form.js"></script>
-		<script type="module" src="js/productos.js"></script>
-		
-		 <script>
-        // Funcionalidad para el menú móvil
-        document.getElementById('menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('menu-icon');
-            const isHidden = menu.classList.contains('max-h-0');
-            
-            if (isHidden) {
-                menu.classList.remove('max-h-0');
-                menu.classList.add('max-h-64');
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                menu.classList.add('max-h-0');
-                menu.classList.remove('max-h-64');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // Cerrar el menú móvil si se redimensiona la ventana a un tamaño mayor
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768) {
-                const menu = document.getElementById('mobile-menu');
-                const icon = document.getElementById('menu-icon');
-                menu.classList.add('max-h-0');
-                menu.classList.remove('max-h-64');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-    </script>
-
+		<footer class="bg-pink-800 text-white py-8 mt-auto"></footer>
 	</body>
 </html>
