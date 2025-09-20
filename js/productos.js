@@ -3,25 +3,25 @@ const listaDeTortas = [
     nombre: "Torta Toffe",
     descripcion: "Exquisita Torta Toffe cubierta con chocolate tortres hecho con el cacao más suave.",
     precio: "$15000",
-    imagen: "img/torta-toffee.jpg"
+    imagen: "/schumi-09-21/img/torta-toffee.jpg"
   },
   {
     nombre: "Chocotorta",
     descripcion: "Chocotorta cubierta con delicioso chocolate en rama.",
     precio: "$20000",
-    imagen: "img/chocotorta.jpg"
+    imagen: "/schumi-09-21/img/chocotorta.jpg"
   },
   {
     nombre: "LemonPie",
     descripcion: "LemonPie hecho con los mejores limones de Santa Fe y con una dulce crema Chantilly.",
     precio: "$15000",
-    imagen: "img/lemon-pie.jpg"
+    imagen: "/schumi-09-21/img/lemon-pie.jpg"
   },
   {
     nombre: "Torta Argentina",
     descripcion: "Mirá el partido de Argentina con esta hermosa torta de bizcochuelo blanco y negro relleno con el mejor Dulce de Leche y decorada como nuestra enseña patria.",
     precio: "$10000",
-    imagen: "img/tortaargentina.jpg"
+    imagen: "/schumi-09-21/img/tortaargentina.jpg"
   }
 ];
 
@@ -53,4 +53,5 @@ listaDeTortas.forEach(torta => {
 
   contenedor.appendChild(tarjeta);
 });
+
 
