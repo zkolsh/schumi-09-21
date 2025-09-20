@@ -5,6 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/style.css" rel="stylesheet">
 		<title>Tortres</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		 <style>
+        .mobile-menu {
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+        }
+    	</style>
 	</head>
 	<body>
 		<header>
@@ -19,7 +26,7 @@
                     <a href="#productos" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Productos</a>
                     <a href="#contacto" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Contacto</a>
 
-					<div class="flex items-center gap-2">
+					<div class="flex items-center gap-2 ml-4">
 						<a href="https://instagram.com" target="_blank" class="social-logo">
 							<img src="img/instagram-logo.jpg" alt="Instagram"
 							class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain"">
@@ -34,13 +41,13 @@
 						</a>
         			</div>
     			</div>
+
 				    <div class="md:hidden flex items-center">
                         <button id="menu-button" class="text-white focus:outline-none">
                             <i id="menu-icon" class="fas fa-bars text-xl"></i>
                         </button>
                     </div>
-			    </div>	
-            </div>
+			</div>	
         
 
 		<div id="mobile-menu" class="mobile-menu md:hidden max-h-0 bg-pink-800">
@@ -50,18 +57,18 @@
                     <a href="#productos" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Productos</a>
                     <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Contacto</a>
                 </div>
-		<div class="flex items-center gap-2">
+		    <div class="px-3 py-2 flex gap-4 justify-center border-t border-pink-700">
 						<a href="https://instagram.com" target="_blank" class="social-logo">
 							<img src="img/instagram-logo.jpg" alt="Instagram"
-							class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain"">
+							class="w-6 h-6 object-contain">
 						</a>
 						<a href="https://youtube.com" target="_blank" class="social-logo">
 							<img src="img/youtube-logo.png" alt="YouTube"
-							class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain"">
+							class="w-6 h-6 object-contain">
 						</a>
 						<a href="https://x.com" target="_blank" class="social-logo">
 							<img src="img/x-logo.png" alt="X (Twitter)"
-							class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain"">
+							class="w-6 h-6 object-contain">
 						</a>
         		</div>
         	</div>
@@ -141,5 +148,39 @@
 
 		<script type="module" src="js/form.js"></script>
 		<script src="js/productos.js"></script>
+
+		 <script>
+        // Funcionalidad para el menú móvil
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            const isHidden = menu.classList.contains('max-h-0');
+            
+            if (isHidden) {
+                menu.classList.remove('max-h-0');
+                menu.classList.add('max-h-64');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                menu.classList.add('max-h-0');
+                menu.classList.remove('max-h-64');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar el menú móvil si se redimensiona la ventana a un tamaño mayor
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768) {
+                const menu = document.getElementById('mobile-menu');
+                const icon = document.getElementById('menu-icon');
+                menu.classList.add('max-h-0');
+                menu.classList.remove('max-h-64');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+	
 	</body>
 </html>
