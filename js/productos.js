@@ -67,7 +67,7 @@ tarjeta.innerHTML = `
       <p class="text-gray-700 text-base mb-4">${torta.descripcion}</p>
       <p class="text-lg font-bold text-gray-800 mb-4">${torta.precio}</p>
     </div>
-    <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors w-fit self-end">
+    <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors w-fit self-center">
       Comprar
     </button>
   </div>
@@ -80,6 +80,7 @@ tarjeta.innerHTML = `
 
   contenedor.appendChild(tarjeta);
 });
+
 
 
 
