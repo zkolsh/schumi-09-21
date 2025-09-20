@@ -54,19 +54,21 @@ const contenedor = document.getElementById("lista-productos");
 listaDeTortas.forEach(torta => {
   const tarjeta = document.createElement("div");
   tarjeta.className = `
-    bg-pink-100 rounded-lg shadow-md overflow-hidden
-    hover:shadow-xl hover:-translate-y-1
+    bg-pink-100 rounded-lg shadow-xl overflow-hidden
+    hover:shadow-2xl hover:-translate-y-1
     transition-transform transition-shadow duration-300
-    flex flex-col w-full max-w-xs
+    flex flex-row w-full max-w-2xl
   `;
 
   tarjeta.innerHTML = `
-    <img src="${torta.imagen}" alt="${torta.nombre}" class="w-full h-48 object-cover">
-    <div class="p-4 flex flex-col flex-grow">
-      <h3 class="text-lg font-semibold mb-2">${torta.nombre}</h3>
-      <p class="text-gray-600 text-sm mb-4 flex-grow">${torta.descripcion}</p>
-      <p class="text-lg font-bold text-gray-800 mb-4">${torta.precio}</p>
-      <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors">Comprar</button>
+    <img src="${torta.imagen}" alt="${torta.nombre}" class="w-1/3 h-auto object-cover">
+    <div class="p-4 flex flex-col justify-between w-2/3">
+      <div>
+        <h3 class="text-xl font-bold tracking-wide mb-2">${torta.nombre}</h3>
+        <p class="text-gray-700 text-base mb-4">${torta.descripcion}</p>
+        <p class="text-lg font-bold text-gray-800 mb-4">${torta.precio}</p>
+      </div>
+      <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors w-fit self-end">Comprar</button>
     </div>
   `;
 
@@ -77,8 +79,6 @@ listaDeTortas.forEach(torta => {
 
   contenedor.appendChild(tarjeta);
 });
-
-
 
 
 
