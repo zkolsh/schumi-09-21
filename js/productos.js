@@ -57,9 +57,8 @@ listaDeTortas.forEach(torta => {
     bg-pink-100 rounded-lg shadow-xl overflow-hidden
     hover:shadow-2xl hover:-translate-y-1
     transition-transform transition-shadow duration-300
-    flex flex-row w-full max-w-2xl
-  `;
-
+    flex flex-col w-full max-w-[30%]
+`;
   tarjeta.innerHTML = `
     <img src="${torta.imagen}" alt="${torta.nombre}" class="w-1/3 h-auto object-cover">
     <div class="p-4 flex flex-col justify-between w-2/3">
@@ -79,6 +78,7 @@ listaDeTortas.forEach(torta => {
 
   contenedor.appendChild(tarjeta);
 });
+
 
 
 
