@@ -22,6 +22,18 @@ const listaDeTortas = [
     descripcion: "Mirá el partido de Argentina con esta hermosa torta de bizcochuelo blanco y negro relleno con el mejor Dulce de Leche y decorada como nuestra enseña patria.",
     precio: "$10000",
     imagen: "img/tortaargentina.jpg"
+  },
+  {
+    nombre: "Torta Oreo",
+    descripcion: "Torta Hecha con las mejores galletitas y en frio para pasar el calor",
+    precio: "$17500",
+    imagen: "img/torta-oreo.jpg"
+  },
+  {
+    nombre: "Rogel",
+    descripcion: "Rogel de finas capas con el mejor dulce de leche casero.",
+    precio: "$22000",
+    imagen: "img/rogel.jpg"
   }
 ];
 
@@ -53,6 +65,7 @@ listaDeTortas.forEach(torta => {
 
   contenedor.appendChild(tarjeta);
 });
+
 
 
 
