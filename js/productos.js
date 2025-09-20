@@ -1,25 +1,25 @@
 const listaDeTortas = [
   {
     nombre: "Torta Toffe",
-    descripcion: "Exquisita Torta Toffe cubierta con chocolate tortres hecho con el cacao más suave.",
+    descripcion: "Exquisita Torta Toffe cubierta con chocolate tortres hecho con el cacao más suave",
     precio: "$15000",
     imagen: "img/torta-toffee.jpg"
   },
   {
     nombre: "Chocotorta",
-    descripcion: "Chocotorta cubierta con delicioso chocolate en rama.",
+    descripcion: "Chocotorta cubierta con delicioso chocolate en rama",
     precio: "$20000",
     imagen: "img/chocotorta.jpg"
   },
   {
     nombre: "LemonPie",
-    descripcion: "LemonPie hecho con los mejores limones de Santa Fe y con una dulce crema Chantilly.",
+    descripcion: "LemonPie hecho con los mejores limones de Santa Fe y con una dulce crema Chantilly",
     precio: "$15000",
     imagen: "img/lemon-pie.jpg"
   },
   {
     nombre: "Torta Argentina",
-    descripcion: "Mirá el partido de Argentina con esta hermosa torta de bizcochuelo blanco y negro relleno con el mejor Dulce de Leche y decorada como nuestra enseña patria.",
+    descripcion: "Mirá el partido de Argentina con esta hermosa torta de bizcochuelo blanco y negro relleno con el mejor Dulce de Leche y decorada como nuestra enseña patria",
     precio: "$10000",
     imagen: "img/tortaargentina.jpg"
   },
@@ -31,9 +31,21 @@ const listaDeTortas = [
   },
   {
     nombre: "Rogel",
-    descripcion: "Rogel de finas capas con el mejor dulce de leche casero.",
+    descripcion: "Rogel de finas capas con el mejor dulce de leche casero",
     precio: "$22000",
     imagen: "img/rogel.jpg"
+  },
+  {
+    nombre: "Selva Negra",
+    descripcion: "Torta de selva negra para los amantes del chocolate semiamargo",
+    precio: "$20000",
+    imagen: "img/selva-negra.jpg"
+  },
+  {
+    nombre: "Red Velvet",
+    descripcion: "Torta Red Velvet para celebrar el amor",
+    precio: "$25000",
+    imagen: "img/red-velvet.jpg"
   }
 ];
 
@@ -65,6 +77,7 @@ listaDeTortas.forEach(torta => {
 
   contenedor.appendChild(tarjeta);
 });
+
 
 
 
