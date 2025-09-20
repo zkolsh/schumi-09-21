@@ -7,7 +7,7 @@ const listaDeTortas = [
   },
   {
     nombre: "Chocotorta",
-    descripcion: "La clasica Chocotorta, cubierta con delicioso chocolate en rama",
+    descripcion: "Chocotorta cubierta con delicioso chocolate en rama",
     precio: "$20000",
     imagen: "img/chocotorta.jpg"
   },
@@ -19,7 +19,7 @@ const listaDeTortas = [
   },
   {
     nombre: "Torta Argentina",
-    descripcion: "Mirá el partido de Argentina con esta hermosa torta rellena con el mejor Dulce de Leche y decorada como nuestra enseña patria",
+    descripcion: "Mirá el partido de Argentina con esta hermosa torta de bizcochuelo blanco y negro relleno con el mejor Dulce de Leche y decorada como nuestra enseña patria",
     precio: "$10000",
     imagen: "img/tortaargentina.jpg"
   },
@@ -58,20 +58,18 @@ listaDeTortas.forEach(torta => {
     hover:shadow-2xl hover:-translate-y-1
     transition-transform transition-shadow duration-300
     flex flex-col w-full max-w-[30%]
-`;
-tarjeta.innerHTML = `
-  <img src="${torta.imagen}" alt="${torta.nombre}" class="w-full h-48 object-cover">
-  <div class="p-4 flex flex-col justify-between">
-    <div>
+  `;
+  tarjeta.innerHTML = `
+    <img src="${torta.imagen}" alt="${torta.nombre}" class="w-1/3 h-auto object-cover">
+    <div class="p-4 flex flex-col h-full">
       <h3 class="text-xl font-bold tracking-wide mb-2 text-center">${torta.nombre}</h3>
       <p class="text-gray-700 text-base mb-4">${torta.descripcion}</p>
-      <p class="text-lg font-bold text-gray-800 mb-4">${torta.precio}</p>
+      <p class="mt-auto text-lg font-bold text-gray-800 mb-4 text-center">${torta.precio}</p>
+      <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors w-fit self-center">
+        Comprar
+      </button>
     </div>
-    <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition-colors w-fit self-center">
-      Comprar
-    </button>
-  </div>
-`;
+  `;
 
   const boton = tarjeta.querySelector("button");
   boton.addEventListener("click", () => {
@@ -80,8 +78,4 @@ tarjeta.innerHTML = `
 
   contenedor.appendChild(tarjeta);
 });
-
-
-
-
 
