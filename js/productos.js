@@ -61,7 +61,7 @@ listaDeTortas.forEach(torta => {
 `;
 tarjeta.innerHTML = `
   <img src="${torta.imagen}" alt="${torta.nombre}" class="w-full h-48 object-cover">
-  <div class="p-4 flex flex-col justify-between">
+  <div class="p-4 flex flex-col justify-between items-center">
     <div>
       <h3 class="text-xl font-bold tracking-wide mb-2">${torta.nombre}</h3>
       <p class="text-gray-700 text-base mb-4">${torta.descripcion}</p>
@@ -80,4 +80,5 @@ tarjeta.innerHTML = `
 
   contenedor.appendChild(tarjeta);
 });
+
 
