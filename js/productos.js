@@ -57,7 +57,7 @@ listaDeTortas.forEach(torta => {
     bg-pink-100 rounded-lg shadow-xl overflow-hidden
     hover:shadow-2xl hover:-translate-y-1
     transition-transform transition-shadow duration-300
-    flex flex-col w-full max-w-[30%]
+    flex flex-col w-full min-w-[30%] md:max-w-[30%]
 `;
 tarjeta.innerHTML = `
   <img src="${torta.imagen}" alt="${torta.nombre}" class="w-full h-48 object-cover">

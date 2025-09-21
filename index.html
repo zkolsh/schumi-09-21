@@ -1,181 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/style.css" rel="stylesheet">
-		<title>Tortres</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-		<style>
-			.mobile-menu {
-				transition: max-height 0.3s ease-out;
-				overflow: hidden;
-			}
-		</style>
-	</head>
 
-	<body>
-		<header>
-			<nav class="bg-pink-800 text-white shadow-lg">
-				<div class="flex items-center flex-row justify-between px-5 py-3
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/style.css" rel="stylesheet">
+	<title>Tortres</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		.mobile-menu {
+			transition: max-height 0.3s ease-out;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav class="bg-pink-800 text-white shadow-lg">
+			<div class="flex items-center flex-row justify-between px-5 py-3
 					m-10 mt-0 rounded-2xl bg-pink-800 text-white font-black text-2xl">
-					<p>Tortres</p>
-					<div class="hidden md:flex items-center space-x-4">
-						<a href="#inicio"
-							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Inicio</a>
-						<a href="#quienes-somos"
-							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Quiénes Somos</a>
-						<a href="#productos"
-							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Productos</a>
-						<a href="#contacto"
-							class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Contacto</a>
-						<div class="flex items-center gap-2 ml-4">
-							<a href="https://instagram.com" target="_blank" class="social-logo">
-								<img src="img/instagram-logo.png" alt="Instagram"
-									class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
-							</a>
-							<a href="https://youtube.com" target="_blank" class="social-logo">
-								<img src="img/youtube-logo.png" alt="YouTube"
-									class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
-							</a>
-							<a href="https://x.com" target="_blank" class="social-logo">
-								<img src="img/x-logo.png" alt="X (Twitter)"
-									class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
-							</a>
-						</div>
-					</div>
-
-					<div class="md:hidden flex items-center">
-						<button type="button" id="menu-button" class="text-white focus:outline-none">
-							<i id="menu-icon" class="fas fa-bars text-xl">Menú</i>
-						</button>
-					</div>
-				</div>
-
-				<div id="mobile-menu" class="mobile-menu md:hidden max-h-0 bg-pink-800">
-					<div class="px-2 pt-2 pb-3 space-y-1">
-						<a href="#inicio"
-							class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Inicio</a>
-						<a href="#quienes-somos"
-							class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Quiénes
-							Somos</a>
-						<a href="#productos"
-							class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Productos</a>
-						<a href="#contacto"
-							class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Contacto</a>
-					</div>
-					<div class="px-3 py-2 flex gap-4 justify-center border-t border-pink-700">
+				<p>Tortres</p>
+				<div class="hidden md:flex items-center space-x-4">
+					<a href="#inicio"
+						class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Inicio</a>
+					<a href="#quienes-somos"
+						class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Quiénes Somos</a>
+					<a href="#productos"
+						class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Productos</a>
+					<a href="#contacto"
+						class="px-3 py-2 rounded-md text-sm font-medium hover:bg-pink-700 transition">Contacto</a>
+					<div class="flex items-center gap-2 ml-4">
 						<a href="https://instagram.com" target="_blank" class="social-logo">
-							<img src="img/instagram-logo.jpg" alt="Instagram" class="w-6 h-6 object-contain grayscale hover:grayscale-0 transition-all">
+							<img src="img/instagram-logo.png" alt="Instagram"
+								class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
 						</a>
 						<a href="https://youtube.com" target="_blank" class="social-logo">
-							<img src="img/youtube-logo.png" alt="YouTube" class="w-6 h-6 object-contain grayscale hover:grayscale-0 transition-all">
+							<img src="img/youtube-logo.png" alt="YouTube"
+								class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
 						</a>
 						<a href="https://x.com" target="_blank" class="social-logo">
-							<img src="img/x-logo.png" alt="X (Twitter)" class="w-6 h-6 object-contain grayscale hover:grayscale-0 transition-all">
+							<img src="img/x-logo.png" alt="X (Twitter)"
+								class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 object-contain">
 						</a>
 					</div>
 				</div>
-			</nav>
-			<script type="module" src="js/navmenu.js"></script>
-		</header>
 
-		<section id="inicio" class="relative min-h-screen flex items-center justify-center bg-gray-100">
-  			
-  			<img src="img/torta-inicio.jpg" alt="Imagen de inicio" class="absolute inset-0 w-full h-full object-cover opacity-40">
+				<div class="md:hidden flex items-center">
+					<button type="button" id="menu-button" class="text-white focus:outline-none">
+						<i id="menu-icon" class="fas fa-bars text-xl"></i>
+					</button>
+				</div>
+			</div>
 
-  			<div class="relative z-10 text-center px-6">
-   			
-    		<h1 class="font-serif text-5xl md:text-6xl font-bold text-gray-900 mb-4">
-      			Bienvenido a Tortres
-    		</h1>
+			<div id="mobile-menu" class="mobile-menu md:hidden max-h-0 bg-pink-800">
+				<div class="px-2 pt-2 pb-3 space-y-1">
+					<a href="#inicio"
+						class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Inicio</a>
+					<a href="#quienes-somos"
+						class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Quiénes
+						Somos</a>
+					<a href="#productos"
+						class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Productos</a>
+					<a href="#contacto"
+						class="block px-3 py-2 rounded-md text-base font-medium hover:bg-pink-700 transition">Contacto</a>
+				</div>
+				<div class="px-3 py-2 flex gap-4 justify-center border-t border-pink-700">
+					<a href="https://instagram.com" target="_blank" class="social-logo">
+						<img src="img/instagram-logo.png" alt="Instagram"
+							class="w-6 h-6 object-contain grayscale hover:grayscale-0 transition-all">
+					</a>
+					<a href="https://youtube.com" target="_blank" class="social-logo">
+						<img src="img/youtube-logo.png" alt="YouTube"
+							class="w-6 h-6 object-contain grayscale hover:grayscale-0 transition-all">
+					</a>
+					<a href="https://x.com" target="_blank" class="social-logo">
+						<img src="img/x-logo.png" alt="X (Twitter)"
+							class="w-6 h-6 object-contain grayscale hover:grayscale-0 transition-all">
+					</a>
+				</div>
+			</div>
+		</nav>
+		<script type="module" src="js/navmenu.js"></script>
+	</header>
 
-   		 	<!-- Subtítulo / cuerpo -->
-    		<p class="font-sans text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-     			 Tortas y postres con cariño
-    		</p>
- 		 </div>
+	<section id="inicio" class="relative min-h-screen flex items-center justify-center bg-gray-100">
+
+		<img src="img/torta-inicio.jpg" alt="Imagen de inicio"
+			class="absolute inset-0 w-full h-full object-cover opacity-40">
+
+		<div class="relative z-10 text-center px-6">
+
+			<h1 class="font-serif text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+				Bienvenido a Tortres
+			</h1>
+
+			<p class="font-sans text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
+				Tortas y postres con cariño
+			</p>
+		</div>
 
 	</section>
 
-		<script type="module" src="js/productos.js"></script>
-		<section id="productos">
-			<h1 class="text-center text-4xl font-bold mb-8">Catálogo de Tortas</h1>
+	<script type="module" src="js/productos.js"></script>
+	<section id="productos">
+		<h1 class="text-center text-4xl font-bold mb-8 mt-20">Catálogo de Tortas</h1>
 
-			<div id="lista-productos" class="flex flex-wrap justify-center gap-6 p-6"></div>
-		</section>
+		<div id="lista-productos" class="flex flex-wrap justify-center gap-6 p-6"></div>
+	</section>
 
-		<div class="w-24 h-px bg-pink-400 mx-auto mb-6"></div>
+	<div class="w-24 h-px bg-pink-400 mx-auto mb-6"></div>
 
-		<section id="quienes-somos">
-			<div class="bg-pink-800 text-white py-8 mt-auto max-w mx-auto px-4 text-center">
-				<p class="text-base md:text-lg leading-relaxed text-pink-100 mb-6 mx-auto md:mx-40">
-					<span class="font-bold text-white text-lg md:text-xl">Quiénes somos:</span>
-					Somos un grupo de seis estudiantes apasionados por el diseño y desarrollo web.
-					Trabajamos en equipo para crear sitios modernos, funcionales y atractivos,
-					combinando creatividad y aprendizaje constante. Este proyecto forma parte de nuestros
-					trabajos prácticos, que presentamos cada domingo al profesor
-					<span class="font-semibold text-yellow-300">Schujman</span>, quien nos guía en este
-					camino de crecimiento académico y profesional. Nuestro objetivo es seguir
-					perfeccionando nuestras habilidades en programación, diseño y experiencia de usuario,
-					aportando ideas innovadoras en cada entrega.
-				</p>
-			</div>
-		</section>
-
-		<div class="w-24 h-px bg-pink-400 mx-auto mb-6"></div>
-
-		<section id="contacto">
-			<h1 class="text-center text-4xl font-bold mb-8">Formulario de contacto</h1>
-			<p class="text-center text-xl font-italic mb-4">
-				¿Querés contactarnos? Completá los siguientes datos para enviarnos un mensaje:
+	<section id="quienes-somos">
+		<div class="bg-pink-800 text-white py-8 mt-auto max-w mx-auto px-4 text-center">
+			<p class="text-base md:text-lg leading-relaxed text-pink-100 mb-6 mx-auto md:mx-40">
+				<span class="font-bold text-white text-lg md:text-xl">Quiénes somos:</span>
+				Somos un grupo de seis estudiantes apasionados por el diseño y desarrollo web.
+				Trabajamos en equipo para crear sitios modernos, funcionales y atractivos,
+				combinando creatividad y aprendizaje constante. Este proyecto forma parte de nuestros
+				trabajos prácticos, que presentamos cada domingo al profesor
+				<span class="font-semibold text-yellow-300">Schujman</span>, quien nos guía en este
+				camino de crecimiento académico y profesional. Nuestro objetivo es seguir
+				perfeccionando nuestras habilidades en programación, diseño y experiencia de usuario,
+				aportando ideas innovadoras en cada entrega.
 			</p>
+		</div>
+	</section>
 
-			<form id="form" class="grid grid-cols-1 m-10 p-5 max-w-xl mx-auto shadow-md gap-8"
-				action="mailto:alejandroschujman@ips.edu.ar" method="post">
-				<div class="flex flex-col">
-					<label for="name" class="block m-2 text-sm font-medium text-gray-800">Nombre</label>
-					<input name="name" type="text" class="p-2 border rounded-xl">
-				</div>
+	<div class="w-24 h-px bg-pink-400 mx-auto mb-6"></div>
 
-				<div class="flex flex-col">
-					<label for="surname" class="block m-2 text-sm font-medium text-gray-800">Apellido</label>
-					<input name="surname" type="text" class="p-2 border rounded-xl">
-				</div>
+	<section id="contacto">
+		<h1 class="text-center text-4xl font-bold mb-8 mt-20">Formulario de contacto</h1>
+		<p class="text-center text-xl font-italic mb-4">
+			¿Querés contactarnos? Completá los siguientes datos para enviarnos un mensaje:
+		</p>
 
-				<div class="flex flex-col">
-					<label for="email" class="block m-2 text-sm font-medium text-gray-800">E-Mail</label>
-					<input name="email" type="email" class="p-2 border rounded-xl">
-				</div>
+		<form id="form" class="grid grid-cols-1 m-10 p-5 max-w-xl mx-auto shadow-md gap-8"
+			action="mailto:alejandroschujman@ips.edu.ar" method="post">
+			<div class="flex flex-col">
+				<label for="name" class="block m-2 text-sm font-medium text-gray-800">Nombre</label>
+				<input name="name" type="text" class="p-2 border rounded-xl">
+			</div>
 
-				<div class="flex flex-col">
-					<label for="phone" class="block m-2 text-sm font-medium text-gray-800">Número de teléfono</label>
-					<input name="phone" type="tel" class="p-2 border rounded-xl">
-				</div>
+			<div class="flex flex-col">
+				<label for="surname" class="block m-2 text-sm font-medium text-gray-800">Apellido</label>
+				<input name="surname" type="text" class="p-2 border rounded-xl">
+			</div>
 
-				<div class="flex flex-col">
-					<label for="birthDate" class="block m-2 text-sm font-medium text-gray-800">Fecha de nacimiento</label>
-					<input name="birthDate" type="date" class="p-2 border rounded-xl">
-				</div>
+			<div class="flex flex-col">
+				<label for="email" class="block m-2 text-sm font-medium text-gray-800">E-Mail</label>
+				<input name="email" type="email" class="p-2 border rounded-xl">
+			</div>
 
-				<div class="flex flex-col">
-					<label for="gender" class="block m-2 text-sm font-medium text-gray-800">Género</label>
-					<input name="gender" type="text" class="p-2 border rounded-xl">
-				</div>
+			<div class="flex flex-col">
+				<label for="phone" class="block m-2 text-sm font-medium text-gray-800">Número de teléfono</label>
+				<input name="phone" type="tel" class="p-2 border rounded-xl">
+			</div>
 
-				<div class="flex flex-col md:col-span-2">
-					<label for="payload" class="block m-2 text-sm font-medium text-gray-800">Comentarios</label>
-					<textarea name="payload" class="p-2 w-full border rounded-xl" rows="8"></textarea>
-				</div>
+			<div class="flex flex-col">
+				<label for="birthDate" class="block m-2 text-sm font-medium text-gray-800">Fecha de nacimiento</label>
+				<input name="birthDate" type="date" class="p-2 border rounded-xl">
+			</div>
 
-				<div class="flex flex-col md:col-span-2 justify-self-center">
-					<label for="cv" class="block m-2 text-sm font-medium text-gray-800">CV</label>
-					<input name="cv" type="file" accept="application/pdf" class="p-2 border rounded-xl">
-				</div>
+			<div class="flex flex-col">
+				<label for="gender" class="block m-2 text-sm font-medium text-gray-800">Género</label>
+				<input name="gender" type="text" class="p-2 border rounded-xl">
+			</div>
 
-				<button type="submit" class="rounded-2xl shadow bg-pink-900 text-white font-bold
+			<div class="flex flex-col md:col-span-2">
+				<label for="payload" class="block m-2 text-sm font-medium text-gray-800">Comentarios</label>
+				<textarea name="payload" class="p-2 w-full border rounded-xl" rows="8"></textarea>
+			</div>
+
+			<div class="flex flex-col md:col-span-2 justify-self-center">
+				<label for="cv" class="block m-2 text-sm font-medium text-gray-800">CV</label>
+				<input name="cv" type="file" accept="application/pdf" class="p-2 border rounded-xl">
+			</div>
+
+			<button type="submit" class="rounded-2xl shadow bg-pink-900 text-white font-bold
 					w-25 max-w-md p-5 mx-auto md:col-span-2">Enviar</button>
-			</form>
-		</section>
-	</body>
+		</form>
+	</section>
+</body>
+
 </html>
