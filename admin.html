@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Tortres</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="bg-pink-800 text-white shadow-lg">
+            <div class="flex items-center flex-row justify-between px-5 py-3
+					m-10 mt-0 rounded-2xl bg-pink-800 text-white font-black text-2xl">
+                <p>Tortres</p>
+            </div>
+        </nav>
+    </header>
+
+    <section id="crear-producto">
+        <h1 class="text-center text-4xl font-bold mb-8 mt-20">Crear un nuevo producto</h1>
+        <p class="text-center text-xl font-italic mb-4">
+            Para crear un nuevo producto, completá los siguientes datos:
+        </p>
+
+        <form id="form" class="grid grid-cols-1 m-10 p-5 max-w-xl mx-auto shadow-md gap-8"
+            action="http://200.3.127.46:3016/crear_producto" method="post" enctype="multipart/form-data">
+            <div class="flex flex-col">
+                <label for="nombre" class="block m-2 text-sm font-medium text-gray-800">Nombre</label>
+                <input name="nombre" type="text" class="p-2 border rounded-xl">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="precio" class="block m-2 text-sm font-medium text-gray-800">Precio</label>
+                <input name="precio" type="number" class="p-2 border rounded-xl">
+            </div>
+
+            <div class="flex flex-col md:col-span-2">
+                <label for="descripcion" class="block m-2 text-sm font-medium text-gray-800">Descripción</label>
+                <textarea name="descripcion" class="p-2 w-full border rounded-xl" rows="8"></textarea>
+            </div>
+
+            <div class="flex flex-col md:col-span-2 justify-self-center">
+                <label for="fotoUrl" class="block m-2 text-sm font-medium text-gray-800">Foto</label>
+                <input name="fotoUrl" type="file" accept="image" class="p-2 border rounded-xl">
+            </div>
+
+            <button type="submit" class="rounded-2xl shadow bg-pink-900 text-white font-bold
+					w-25 max-w-md p-5 mx-auto md:col-span-2">Enviar</button>
+        </form>
+    </section>
+</body>
+
+</html>
