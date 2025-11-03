@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Tortres</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="bg-pink-800 text-white shadow-lg">
+            <div class="flex items-center flex-row justify-between px-5 py-3
+					m-10 mt-0 rounded-2xl bg-pink-800 text-white font-black text-2xl">
+                <p>Tortres</p>
+            </div>
+        </nav>
+    </header>
+
+    <section id="crear-producto">
+        <h1 class="text-center text-4xl font-bold mb-8 mt-20">Crear un nuevo producto</h1>
+        <p class="text-center text-xl font-italic mb-4">
+            Para crear un nuevo producto, completá los siguientes datos:
+        </p>
+
+        <form id="form" class="grid grid-cols-1 m-10 p-5 max-w-xl mx-auto shadow-md gap-8"
+            action="http://200.3.127.46:30016/crear_producto" method="post" enctype="multipart/form-data">
+            <div class="flex flex-col">
+                <label for="nombre" class="block m-2 text-sm font-medium text-gray-800">Nombre</label>
+                <input name="nombre" type="text" class="p-2 border rounded-xl">
+            </div>
+
+            <div class="flex flex-col">
+                <label for="precio" class="block m-2 text-sm font-medium text-gray-800">Precio</label>
+                <input name="precio" type="number" class="p-2 border rounded-xl">
+            </div>
+
+            <div class="flex flex-col md:col-span-2">
+                <label for="descripcion" class="block m-2 text-sm font-medium text-gray-800">Descripción</label>
+                <textarea name="descripcion" class="p-2 w-full border rounded-xl" rows="8"></textarea>
+            </div>
+
+            <div class="flex flex-col md:col-span-2 justify-self-center">
+                <label for="fotoUrl" class="block m-2 text-sm font-medium text-gray-800">Foto</label>
+                <input name="fotoUrl" type="file" accept="image" class="p-2 border rounded-xl">
+            </div>
+
+            <button type="submit" class="rounded-2xl shadow bg-pink-900 text-white font-bold
+					w-25 max-w-md p-5 mx-auto md:col-span-2">Enviar</button>
+        </form>
+
+        <script>
+    document.getElementById('form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+            }
+        }).then(data => {
+            alert('Producto creado');
+            form.reset();
+        }).catch(error => {
+            console.error('Error submitting form:', error);
+            alert(`Ocurrió un error: ${error.message}`);
+        });
+    });
+        </script>
+    </section>
+
+    <section id="mensajes">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Buzón de mensajes</h2>
+            <div id="formularios-admin" class="grid grid-cols-1 gap-6 p-4 max-w-4xl mx-auto">
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    cargarFormulariosAdmin();
+                });
+
+                async function cargarFormulariosAdmin() {
+                    try {
+                        const response = await fetch(`http://200.3.127.46:30016/obtener_formularios`);
+
+                        if (!response.ok) {
+                            throw new Error('Error al cargar formularios. Código: ' + response.status);
+                        }
+
+                        const formularios = await response.json();
+                        mostrarFormulariosEnAdmin(formularios);
+                    } catch (error) {
+                        console.error('Error:', error);
+                        document.getElementById('formularios-admin').innerHTML = `
+                            <div class="text-center py-8">
+                                <p class="text-red-600 font-semibold">❌ Error cargando el panel de administración</p>
+                                <p class="text-sm text-gray-500">No se pudieron obtener los datos de los formularios. Es posible que el servidor no esté funcionando.</p>
+                            </div>
+                        `;
+                    }
+                }
+
+                function mostrarFormulariosEnAdmin(formularios) {
+                    const contenedor = document.getElementById('formularios-admin');
+
+                    if (formularios.length === 0) {
+                        contenedor.innerHTML = `
+                            <div class="text-center py-12 bg-white rounded-xl shadow-lg">
+                                <p class="text-gray-600 text-lg">📝 No hay formularios enviados aún.</p>
+                                <p class="text-gray-400 mt-2">Esperando nuevas postulaciones o mensajes.</p>
+                            </div>
+                        `;
+                        return;
+                    }
+
+                    contenedor.innerHTML = formularios.map(formulario => {
+                        const formattedDate = new Date(formulario.nacimiento).toLocaleDateString('es-ES', {
+                            year: 'numeric', month: 'long', day: 'numeric'
+                        });
+
+                        return `
+                            <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-pink-700 transition-shadow duration-300 hover:shadow-xl">
+                                <div class="flex justify-between items-start mb-4">
+                                    <h3 class="text-xl font-bold text-gray-800">${formulario.nombre} ${formulario.apellido}</h3>
+                                    <span class="text-sm text-gray-500 font-mono">ID: ${formulario.id}</span>
+                                </div>
+            
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    ${createDetailItem('📧 Email', formulario.email)}
+                                    ${createDetailItem('📞 Teléfono', formulario.telefono)}
+                                    ${createDetailItem('🎂 Nacimiento', formattedDate)}
+                                    ${createDetailItem('🚻 Género', formulario.genero)}
+                                </div>
+            
+                                <div class="mt-4">
+                                    <p class="font-medium text-gray-800">Mensaje:</p>
+                                    <p class="text-gray-600 whitespace-pre-wrap mt-1 p-3 bg-gray-50 rounded-lg">${formulario.mensaje || 'No hay mensaje.'}</p>
+                                </div>
+            
+                                <div class="mt-4">
+                                    <p class="font-medium text-gray-800">CV:</p>
+                                    ${formulario.cv ?
+                                `<a href="servicios/${formulario.cv}" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold transition duration-150">
+                                            📄 Ver CV (Archivo: ${formulario.cv})
+                                        </a>` :
+                                `<span class="text-gray-500">No se adjuntó CV.</span>`
+                            }
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                }
+
+                function createDetailItem(label, value) {
+                    return `
+                        <div class="flex flex-col">
+                            <span class="text-xs font-semibold uppercase text-gray-500">${label}</span>
+                            <span class="text-gray-700 font-medium">${value}</span>
+                        </div>
+                    `;
+                }
+            </script>
+    </section>
+</body>
+
+</html>
